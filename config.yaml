@@ -1,0 +1,26 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: David Byttow
+theme: davidbyttow
+params:
+  background_color_class: ignored
+  custom_css:
+    - css/styles.css
+
+menu:
+  main:
+    - identifier: projects
+      name: Projects
+      url: /projects
+    - identifier: work
+      name: Work
+      url: /work
+    - identifier: videos
+      name: Videos
+      url: /videos
+    - identifier: interests
+      name: Interests
+      url: /interests
+    - identifier: blog
+      name: Writing
+      url: /blog
