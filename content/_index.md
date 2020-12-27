@@ -4,8 +4,10 @@ date: 2019-07-18T17:18:05+01:00
 draft: false
 ---
 
-# Hello.
+# Engineer by trade, artist at heart.
 
-My name is David Byttow. This site is home to a collection of things I'm interested in. You can think of it like a resume of work experience, projects, and hobbies.
+I'm an experienced software engineer with a penchant for collecting hobbies and exploring creative outlets.
 
-Feel free to reach out to me anytime.
+This site is home to a collection of things I have done, am doing, or am interested in.
+
+Feel free to reach out to me anytime on any medium.

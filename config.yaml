@@ -2,10 +2,18 @@ baseURL: http://example.org/
 languageCode: en-us
 title: David Byttow
 theme: davidbyttow
+assertDir: assets
 params:
-  background_color_class: ignored
+  body_classes: avenir bg-white
+  background_color_class: bg-white
   custom_css:
     - css/styles.css
+  twitter: https://twitter.com/davidbyttow
+  youtube: https://youtube.com/davidbyttow
+  medium: https://medium.com/@davidbyttow
+  instagram: https://instagram.com/davidbyttow
+  linkedin: https://www.linkedin.com/in/davidbyttow/
+  github: https://github.com/davidbyttow
 
 menu:
   main:
