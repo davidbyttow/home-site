@@ -1,25 +1,17 @@
-{{ define "header" }}
-   {{/* We can override any block in the baseof file be defining it in the template */}}
-  {{ partial "page-header.html" . }}
-{{ end }}
 
 {{ define "main" }}
   {{ $section := .Site.GetPage "section" .Section }}
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-
-    <header class="mt4 w-100">
-      <h1 class="f1 athelas mb1">
-        {{- .Title -}}
-      </h1>
-      {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
+  <article class="mw7 center ph3">
+    <header class="w-100 center mh-auto">
+      <h1 class="f1-ns f2 athelas mb0">{{- .Title -}}</h1>
       {{ if .Date }}
       <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
         {{- .Date.Format "January 2, 2006" -}}
       </time>
       {{ end }}
-    </header>
+    </section>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+    <section class="w-100 center mh-auto lh-copy serif f4-ns f5 nested-copy-line-height nested-links nested-img mid-gray">
       {{- .Content -}}
       {{- partial "tags.html" . -}}
     </section>
