@@ -2,6 +2,7 @@ baseURL: http://example.org/
 languageCode: en-us
 title: David Byttow
 theme: davidbyttow
+googleAnalytics: G-JKQJCRJHHD
 assertDir: assets
 params:
   body_classes: avenir bg-white
@@ -17,18 +18,21 @@ params:
 
 menu:
   main:
-    - identifier: projects
-      name: Projects
-      url: /projects
     - identifier: work
       name: Work
       url: /work
-    - identifier: videos
-      name: Videos
-      url: /videos
-    - identifier: interests
-      name: Interests
-      url: /interests
-    - identifier: blog
-      name: Writing
-      url: /blog
+      weight: 10
+    # - identifier: projects
+    #   name: Projects
+    #   url: /projects
+    #   weight: 50
+    # - identifier: videos
+    #   name: Videos
+    #   url: /videos
+    #   weight: 100
+    # - identifier: interests
+    #   name: Interests
+    #   url: /interests
+    # - identifier: blog
+    #   name: Writing
+    #   url: /blog

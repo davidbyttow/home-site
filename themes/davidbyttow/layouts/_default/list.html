@@ -1,8 +1,6 @@
 {{ define "main" }}
 <article class="flex flex-column center ph2 ph0-l mw7">
-  <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l lh-copy mid-gray">
-    {{- .Content -}}
-  </section>
+  <section class="cf f4 lh-copy">{{- .Content -}}</section>
   <section class="flex flex-column">
     {{ range .Pages }}
     <div class="w-100 mb4">{{- partial "summary-with-image.html" . -}}</div>

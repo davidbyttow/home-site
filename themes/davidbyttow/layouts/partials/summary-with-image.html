@@ -24,12 +24,12 @@
         <div
           class="flex flex-column w-100 mx-100 justify-between p1 {{ if $hasMedia }}pl2-ns{{ end }}"
         >
-          <div class="mb8">
-            <div class="f3 fw1 athelas mb1 lh-title">{{ .Title }}</div>
-            <span class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-              {{ .Summary | truncate 280 }}
-            </span>
-          </div>
+        <div class="mb8">
+          {{ if .Params.job_title }}
+          {{- partial "summary-content-for-work" . -}}
+          {{ else }}
+          {{- partial "summary-content" . -}}
+          {{ end }}
         </div>
       </div>
     </a>

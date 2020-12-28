@@ -1,0 +1,14 @@
+<div class="f3 fw1 athelas lh-copy lh-title">{{ .Title }}</div>
+<div class="f5 fw5 lh-copy">{{ .Params.job_title }}</div>
+<div class="f6 lh-copy">
+  {{ dateFormat "Jan, 2006" .Params.start_date }}
+  <!-- -->
+  –
+  <!-- -->
+  {{ if .Params.end_date }}{{ dateFormat "Jan, 2006" .Params.end_date }}
+  <!-- -->
+  {{ else }}Present{{ end }}
+</div>
+<div class="f6 mt2 lh-copy nested-copy-line-height nested-links">
+  {{ .Summary | truncate 280 }}
+</div>

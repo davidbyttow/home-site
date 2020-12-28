@@ -1,0 +1,33 @@
+
+{{ define "main" }}
+{{ $section := .Site.GetPage "section" .Section }}
+<article class="mw7 center ph3">
+  <header class="w-100 center mh-auto">
+    <h1 class="f1-ns f2 athelas mb0">{{- .Title -}}</h1>
+    <div class="f5 fw5 lh-copy">{{ .Params.job_title }}</div>
+    <div class="f6 lh-copy">
+      {{ dateFormat "Jan, 2006" .Params.start_date }}
+      <!-- TODO: Time -->
+      –
+      <!-- -->
+      {{ if .Params.end_date }}{{ dateFormat "Jan, 2006" .Params.end_date }}
+      <!-- -->
+      {{ else }}Present{{ end }}
+    </div>
+  </section>
+
+  <section class="w-100 center mh-auto lh-copy serif f4-ns f5 nested-copy-line-height nested-links nested-img mid-gray">
+    {{- .Content -}}
+    {{- partial "tags.html" . -}}
+  </section>
+
+
+  {{ $hasAside := or .Params.toc (.Site.RegularPages.Related .) }}
+  {{ if $hasAside }}
+  <aside class="w-30-l mt6-l">
+    {{- partial "menu-contextual.html" . -}}
+  </aside>
+  {{ end }}
+
+</article>
+{{ end }}

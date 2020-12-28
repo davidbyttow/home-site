@@ -1,7 +1,6 @@
 ---
-title: "My First Post"
+title: "David Byttow"
 date: 2019-07-18T17:18:05+01:00
-draft: false
 ---
 
 # Engineer by trade, artist at heart.
