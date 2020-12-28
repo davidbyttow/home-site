@@ -2,7 +2,7 @@ baseURL: http://example.org/
 languageCode: en-us
 title: David Byttow
 theme: davidbyttow
-googleAnalytics: G-JKQJCRJHHD
+googleAnalytics: "G-KPCBK8EW1C"
 assertDir: assets
 params:
   body_classes: avenir bg-white
