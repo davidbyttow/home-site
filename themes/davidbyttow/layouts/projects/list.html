@@ -1,0 +1,54 @@
+{{ define "main" }}
+<article class="dt dt--fixed mw7 center">
+  <section class="cf f4 lh-copy">{{- .Content -}}</section>
+  <section class="grid grid-columns-2-ns grid-columns-3-l">
+    {{ range .Pages }}
+    <div class="w-100 mb4">
+      {{ $featured_image := .Params.featured_image }}
+      <article class="mh2 ba b--black-40 h-100">
+        <section class="flex flex-column">
+
+          {{ $url := or .Params.external_link .URL }}
+
+          <a href="{{$url}}" class="color-inherit dim link link-transition" {{if .Params.external_link}}rel="noopener" target="_blank"{{end}}>
+            <div class="w-100 mw-100-ns pl0-ns flex-ns">
+              {{ if or .Params.featured_image 1 }}
+              <!-- {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}} -->
+              {{/* $featured_image := (trim $featured_image "/") | absURL */}}
+              <!-- -->
+              {{ $image := resources.Get "images/github-project.png" }}
+              <!-- -->
+              <img
+                src="{{ $image.RelPermalink }}"
+                class="img w-auto grow"
+                alt="image from {{ .Title }}"
+              />
+              {{ end }}
+              <!-- -->
+              {{ $hasMedia := or .Params.video_id .Params.featured_image }}
+              <!-- -->
+              {{ if .Params.video_id }}
+              <div class="img h4-ns w-50 relative">{{- partial "youtube" . -}}</div>
+              {{ end }}
+              <div
+                class="flex flex-column w-100 mx-100 justify-between p1 {{ if $hasMedia }}pl2-ns{{ end }}"
+              >
+              <div class="pa2 bt b--black-20">
+                <div class="f5 fw6 mb1 lh-title">{{ .Title }}
+                    {{ if .Params.external_link }}
+                    {{- partial "svg/new-window.svg" (dict "size" "10px") -}}
+                    {{ end }}
+                </div>
+                <span class="f6 mt2 lh-copy nested-copy-line-height nested-links">
+                  {{ .Summary | truncate 280 }}
+                </span>
+              </div>
+            </div>
+          </a>
+        </section>
+      </article>
+    </div>
+    {{ end }}
+  </section>
+</article>
+{{ end }}

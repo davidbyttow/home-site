@@ -21,11 +21,11 @@ menu:
     - identifier: work
       name: Work
       url: /work
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects
       weight: 10
-    # - identifier: projects
-    #   name: Projects
-    #   url: /projects
-    #   weight: 50
     # - identifier: videos
     #   name: Videos
     #   url: /videos

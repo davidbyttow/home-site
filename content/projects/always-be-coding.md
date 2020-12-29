@@ -1,5 +1,6 @@
 ---
 title: "Always Be Coding"
-date: 2020-12-24T09:08:43-05:00
-draft: true
+weight: -100
 ---
+
+Always Be Coding is the overall project name that covers my blog and YouTube videos on programming.
