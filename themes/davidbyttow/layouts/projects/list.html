@@ -3,6 +3,7 @@
   <section class="cf f4 lh-copy">{{- .Content -}}</section>
   <section class="grid grid-columns-2-ns grid-columns-3-l">
     {{ range .Pages }}
+    {{ if not .Draft }}
     <div class="w-100 mb4">
       {{ $featured_image := .Params.featured_image }}
       <article class="mh2 ba b--black-40 h-100">
@@ -48,6 +49,7 @@
         </section>
       </article>
     </div>
+    {{ end }}
     {{ end }}
   </section>
 </article>

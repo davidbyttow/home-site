@@ -4,6 +4,7 @@ title: David Byttow
 theme: davidbyttow
 googleAnalytics: "G-KPCBK8EW1C"
 assertDir: assets
+buildDrafts: false
 params:
   body_classes: avenir bg-white
   background_color_class: bg-white
