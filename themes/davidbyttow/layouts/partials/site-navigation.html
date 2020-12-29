@@ -18,10 +18,11 @@
     <div>
       {{ partial "i18nlist.html" . }} {{ if .Site.Menus.main }}
       <ul class="pl0 mr3">
+        {{ $section := .Section }}
         {{ range .Site.Menus.main }}
         <li class="list f5 dib pr3">
           <a
-            class="hover-black no-underline black-90"
+            class="dim link black-90"
             href="{{ .URL }}"
             title="{{ .Name }} page"
           >

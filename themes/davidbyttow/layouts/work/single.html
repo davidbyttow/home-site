@@ -3,6 +3,7 @@
 {{ $section := .Site.GetPage "section" .Section }}
 <article class="mw7 center ph3">
   <header class="w-100 center mh-auto">
+    {{- partial "breadcrumbs.html" . -}}
     <h1 class="f1-ns f2 athelas mb0">{{- .Title -}}</h1>
     <div class="f5 fw5 lh-copy">{{ .Params.job_title }}</div>
     <div class="f6 lh-copy">
