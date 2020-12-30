@@ -2,17 +2,21 @@
 <article class="dt dt--fixed mw7 center ph2">
   <section class="cf f4 lh-copy">{{- .Content -}}</section>
 
-  <section class="grid grid-columns-2-ns grid-columns-3-l">
-    {{ range .Pages }}
-    {{ if not .Draft }}
-    <div class="w-100 mb4">
+  <section class="grid grid-columns-2-ns grid-columns-3-l gc2 gr2">
+    {{ range .Pages }} {{ if not .Draft }}
+    <div class="w-100">
       {{ $featured_image := .Params.featured_image }}
-      <article class="mr2-ns ba b--black-40 h-100">
+      <article class="ba b--black-40 h-100">
         <section class="flex flex-column">
           {{ $url := or .Params.external_link .URL }}
           <div class="w-100 mw-100-ns pl0-ns flex-ns">
-            <a href="{{$url}}" class="color-inherit dim link link-transition" {{if .Params.external_link}}rel="noopener" target="_blank"{{end}}>
+            <a
+              href="{{$url}}"
+              class="color-inherit dim link link-transition"
+              {{if .Params.external_link}}rel="noopener" target="_blank" {{end}}
+            >
               {{ $thumbnailImage := "images/github-project.png" }}
+              <!-- -->
               {{ if .Params.featured_image }}
                 {{ $thumbnailImage = .Params.featured_image }}
               {{ end }}
@@ -24,23 +28,21 @@
                 class="img w-auto bb b--black-20"
                 alt="image from {{ .Title }}"
               />
-              <!-- -->
-              {{ if .Params.video_id }}
-              <div class="img h4-ns w-50 relative">{{- partial "youtube" . -}}</div>
-              {{ end }}
 
-              <div
-                class="flex flex-column w-100 mx-100 justify-between p1"
-              >
-                <div class="pa2 ">
-                  <div class="f5 fw6 mb1 lh-title">{{ .Title }}
-                      {{ if .Params.external_link }}
+              <div class="flex flex-column">
+                <div class="pa2">
+                  <div class="f5 fw6 mb1 lh-title">
+                    {{ .Title }}
+                    <!-- -->
+                    {{ if .Params.external_link }}
                       {{- partial "svg/new-window.svg" (dict "size" "10px") -}}
-                      {{ end }}
+                    {{ end }}
                   </div>
-                  <span class="f6 mt2 lh-copy nested-copy-line-height nested-links">
+                  <div
+                    class="f6 mt2 lh-copy nested-copy-line-height nested-links truncate-3"
+                  >
                     {{ .Summary | truncate 200 }}
-                  </span>
+                </div>
                 </div>
               </div>
             </a>
@@ -48,8 +50,7 @@
         </section>
       </article>
     </div>
-    {{ end }}
-    {{ end }}
+    {{ end }} {{ end }}
   </section>
 </article>
 {{ end }}

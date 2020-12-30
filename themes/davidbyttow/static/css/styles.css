@@ -7,3 +7,12 @@
   /* autoprefixer: ignore next */
   -webkit-box-orient: vertical;
 }
+
+.truncate-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}

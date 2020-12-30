@@ -3,6 +3,7 @@ title: "Friday Afternoon Escape"
 date: 2020-12-24T09:45:13-05:00
 external_link: https://counterpoint.itch.io/friday-afternoon-escape
 weight: 40
+featured_image: images/fridayescape-project.png
 ---
 
 A game created for the MiniJam game jam. The theme was "Stealth" and the constraint was "No Violence."
