@@ -5,6 +5,7 @@ theme: davidbyttow
 googleAnalytics: "G-KPCBK8EW1C"
 assertDir: assets
 buildDrafts: false
+
 params:
   body_classes: avenir bg-white
   background_color_class: bg-white
@@ -17,6 +18,9 @@ params:
   linkedin: https://www.linkedin.com/in/davidbyttow/
   github: https://github.com/davidbyttow
 
+permalinks:
+  blog: /:year/:title
+
 menu:
   main:
     - identifier: work
@@ -27,10 +31,10 @@ menu:
       name: Projects
       url: /projects
       weight: 10
-    # - identifier: videos
-    #   name: Videos
-    #   url: /videos
-    #   weight: 100
+    - identifier: blog
+      name: Blog
+      url: https://www.alwaysbecoding.com
+      weight: 100
     # - identifier: interests
     #   name: Interests
     #   url: /interests
